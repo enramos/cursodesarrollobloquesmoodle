@@ -22,7 +22,10 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+
 $string['pluginname'] = 'Bloque Curso Desarrollo de bloques en Moodle';
 $string['cursodesarrollobloquesmoodle'] = 'Hello world';
 $string['cursodesarrollobloquesmoodle:addinstance'] = 'Add a new block';
 $string['cursodesarrollobloquesmoodle:myaddinstance'] = 'Add a new block to the My Moodle page';
+//0202-15
+$string['blockstring'] = 'Default text';

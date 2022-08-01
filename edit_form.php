@@ -22,31 +22,17 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-class block_cursodesarrollobloquesmoodle extends block_base {
-
-    function init() {
-        $this->title = get_string('pluginname', 'block_cursodesarrollobloquesmoodle');
-    }
-
-
-    public function get_content() {
-
-        if ($this->content !== null) {
-            return $this->content;
-        }
-
-        $this->content =  new stdClass;
-
-        //$this->content->text = 'Hola Mundo desde Moodle!';
-        if (!empty($this->config->text)) {
-            $this->content->text = $this->config->text;
-        } else {
-            $this->content->text = 'Puedes cambiar este texto desde la configuración del bloque.';
-        }
+class block_cursodesarrollobloquesmoodle_edit_form extends block_edit_form {
         
-        $this->content->footer = 'Todos los derechos reservados';
-    
-        return $this->content;
-    }
+    protected function specific_definition($mform) {
+        
+        // Añade la sección de configuración de parámetros.
+        $mform->addElement('header', 'config_header', get_string('blocksettings', 'block'));
 
+        // Agrega un campo de configuración de texto
+        $mform->addElement('text', 'config_text', get_string('blockstring', 'block_cursodesarrollobloquesmoodle'));
+        $mform->setDefault('config_text', 'Cadena por omisión');
+        $mform->setType('config_text', PARAM_RAW);        
+
+    }
 }
