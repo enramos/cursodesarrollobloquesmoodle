@@ -28,4 +28,4 @@ $string['cursodesarrollobloquesmoodle'] = 'Hello world';
 $string['cursodesarrollobloquesmoodle:addinstance'] = 'Add a new block';
 $string['cursodesarrollobloquesmoodle:myaddinstance'] = 'Add a new block to the My Moodle page';
 //0202-15
-$string['blockstring'] = 'Default text';
+$string['blockstring'] = 'Default Block String';

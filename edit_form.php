@@ -31,8 +31,11 @@ class block_cursodesarrollobloquesmoodle_edit_form extends block_edit_form {
 
         // Agrega un campo de configuración de texto
         $mform->addElement('text', 'config_text', get_string('blockstring', 'block_cursodesarrollobloquesmoodle'));
-        //En caso de que queramos agregarle un valor por defecto...
-        //$mform->setDefault('config_text', 'Cadena por omisión');
+        
+        // En caso de que queramos agregarle un valor por defecto...
+        // $mform->setDefault('config_text', 'Cadena por omisión');
+
+        // Establecemos tipo de parámetro sin validación
         $mform->setType('config_text', PARAM_RAW);        
 
     }
