@@ -26,6 +26,8 @@ class block_cursodesarrollobloquesmoodle_edit_form extends block_edit_form {
         
     protected function specific_definition($mform) {
         
+        /*0202-15*/
+
         // Añade la sección de configuración de parámetros.
         $mform->addElement('header', 'config_header', get_string('blocksettings', 'block'));
 
@@ -33,11 +35,13 @@ class block_cursodesarrollobloquesmoodle_edit_form extends block_edit_form {
         $mform->addElement('text', 'config_text', get_string('blockstring', 'block_cursodesarrollobloquesmoodle'));
         // En caso de que queramos agregarle un valor por defecto... $mform->setDefault('config_text', 'Cadena por omisión');
         // Establecemos tipo de parámetro sin validación
-        $mform->setType('config_text', PARAM_RAW);        
+        $mform->setType('config_text', PARAM_RAW);      
+        
+        /*0203-16*/
 
         // Crear el parámetro para el título del bloque
         $mform->addElement('text', 'config_title', get_string('blocktitle', 'block_holamundo'));
-        $mform->setDefault('config_title', 'Valor por default');
+        //$mform->setDefault('config_title', 'Valor por default');
         $mform->setType('config_title', PARAM_TEXT);
     }
 }
