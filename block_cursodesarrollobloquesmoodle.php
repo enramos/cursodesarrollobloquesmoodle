@@ -28,7 +28,6 @@ class block_cursodesarrollobloquesmoodle extends block_base {
         $this->title = get_string('pluginname', 'block_cursodesarrollobloquesmoodle');
     }
 
-
     public function get_content() {
 
         if ($this->content !== null) {
