@@ -41,7 +41,7 @@ class block_cursodesarrollobloquesmoodle_edit_form extends block_edit_form {
 
         // Crear el parámetro para el título del bloque
         $mform->addElement('text', 'config_title', get_string('blocktitle', 'block_holamundo'));
-        //$mform->setDefault('config_title', 'Valor por default');
+        $mform->setDefault('config_title', 'NUEVO BLOQUE');
         $mform->setType('config_title', PARAM_TEXT);
     }
 }
