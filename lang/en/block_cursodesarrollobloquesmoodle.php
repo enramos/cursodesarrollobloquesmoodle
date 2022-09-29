@@ -38,3 +38,7 @@ $string['defaulttext'] = 'Hello world block (defaulttext)';
 
 //0204-17 Ocultar bloque
 $string['blockdisabled'] = 'Disabled Block (blockdisabled)';
+
+//0206-19
+$string['allowhtml'] = 'Allow HTML (allowhtml)';
+$string['allowhtml_desc'] = 'Allow HTML Description (allowhtml_desc)';

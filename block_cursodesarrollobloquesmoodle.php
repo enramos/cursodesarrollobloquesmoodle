@@ -39,6 +39,7 @@ class block_cursodesarrollobloquesmoodle extends block_base {
                 return null;
             } else {
             return $this->content;
+            }
         }
         
         $this->content =  new stdClass;
@@ -75,5 +76,7 @@ class block_cursodesarrollobloquesmoodle extends block_base {
         return true;
      }
 
+    //Activamos los settings a nivel administrador (archivo setting.php)
+    function has_config() {return true;}
 
 }
