@@ -30,10 +30,17 @@ class block_cursodesarrollobloquesmoodle extends block_base {
 
     public function get_content() {
 
-        if ($this->content !== null) {
-            return $this->content;
+        if ($this->config->disabled) {
+            return null;
         }
 
+        if ($this->content !== null) {
+            if ($this->config->disabled) {
+                return null;
+            } else {
+            return $this->content;
+        }
+        
         $this->content =  new stdClass;
 
         //$this->content->text = 'Hola Mundo desde Moodle!';
@@ -63,5 +70,10 @@ class block_cursodesarrollobloquesmoodle extends block_base {
             }    
         }
      }
+
+     public function instance_allow_multiple() {
+        return true;
+     }
+
 
 }

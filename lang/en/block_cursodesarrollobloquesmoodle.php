@@ -27,9 +27,14 @@ $string['pluginname'] = 'Bloque Curso Desarrollo de bloques en Moodle';
 $string['cursodesarrollobloquesmoodle'] = 'Hello world';
 $string['cursodesarrollobloquesmoodle:addinstance'] = 'Add a new block';
 $string['cursodesarrollobloquesmoodle:myaddinstance'] = 'Add a new block to the My Moodle page';
+
 //0202-15 Parámetros
-$string['blockstring'] = 'Cadena texto bloque';
+$string['blockstring'] = 'Block String (blockstring)';
+
 //0203-16 Specialization
-$string['blocktitle'] = 'Hello world block';
-$string['defaulttitle'] = 'Hello world block';
-$string['defaulttext'] = 'Hello world block';
+$string['blocktitle'] = 'Hello world block (blocktitle)';
+$string['defaulttitle'] = 'Hello world block (defaulttitle)';
+$string['defaulttext'] = 'Hello world block (defaulttext)';
+
+//0204-17 Ocultar bloque
+$string['blockdisabled'] = 'Disabled Block (blockdisabled)';
