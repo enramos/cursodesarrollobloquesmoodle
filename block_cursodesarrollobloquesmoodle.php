@@ -61,13 +61,13 @@ class block_cursodesarrollobloquesmoodle extends block_base {
         if (isset($this->config)) {
 
             if (empty($this->config->title)) {
-                $this->title = get_string('defaulttitle', 'block_holamundo');            
+                $this->title = get_string('defaulttitle', 'block_cursodesarrollobloquesmoodle');            
             } else {
                 $this->title = $this->config->title;
             }
      
             if (empty($this->config->text)) {
-                $this->config->text = get_string('defaulttext', 'block_holamundo');
+                $this->config->text = get_string('defaulttext', 'block_cursodesarrollobloquesmoodle');
             }    
         }
      }
@@ -77,6 +77,21 @@ class block_cursodesarrollobloquesmoodle extends block_base {
      }
 
     //Activamos los settings a nivel administrador (archivo setting.php)
-    function has_config() {return true;}
+    function has_config() {
+        return true;
+    }
+
+    //Utilizar el parámetro general definido anteriormente (allowhtml)
+    public function instance_config_save($data,$nolongerused =false) {
+        global $CFG;
+        
+        if (!empty($CFG->block_cursodesarrollobloquesmoodle_allowhtml)) {
+            // && $CFG->block_cursodesarrollobloquesmoodle_allowhtml == '1'
+            $data->text = strip_tags($data->text);
+        } 
+    
+        // Implementación predeterminada definida en la clase principal
+        return parent::instance_config_save($data,$nolongerused);
+    }
 
 }
