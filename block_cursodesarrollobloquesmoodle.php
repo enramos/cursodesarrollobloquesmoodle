@@ -94,4 +94,16 @@ class block_cursodesarrollobloquesmoodle extends block_base {
         return parent::instance_config_save($data,$nolongerused);
     }
 
+    
+    //Restringir acceso por layout
+    function applicable_formats() {
+        return array(
+            'site-index' => true,
+            'course-view' => false,
+            'course-view-social' => false,
+            'mod' => true,
+            'mod-quiz' => false
+        );
+    }
+
 }
