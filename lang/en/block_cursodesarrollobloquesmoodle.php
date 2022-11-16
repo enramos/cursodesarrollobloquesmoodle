@@ -46,3 +46,6 @@ $string['allowhtml_desc'] = 'Allow HTML Description (allowhtml_desc)';
 //0301-26
 $string['addpage'] = 'Add page (addpage)';
 $string['textfields'] = 'Text fields (textfields)';
+
+//0303-28
+$string['edithtml'] = 'El bloque Hola Mundo!';

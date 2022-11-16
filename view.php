@@ -25,7 +25,7 @@
 require_once('../../config.php');
 require_once('cursodesarrollobloquesmoodle_form.php');
 
-global $DB;
+global $DB, $OUTPUT, $PAGE;
 
 // Check for all required variables.
 $courseid = required_param('courseid', PARAM_INT);
@@ -36,6 +36,13 @@ if (!$course = $DB->get_record('course',array('id' => $courseid))) {
 
 require_login($course);
 
+//VIDEO 27 (0303)
+$PAGE->set_url('/blocks/cursodesarrollobloquesmoodle/view.php', array('id' => $courseid));
+$PAGE->set_pagelayout('standard');
+$PAGE->set_heading(get_string('edithtml', 'block_cursodesarrollobloquesmoodle'));
+
 $cursodesarrollobloquesmoodle = new cursodesarrollobloquesmoodle_form();
 
+echo $OUTPUT->header();
 $cursodesarrollobloquesmoodle->display();
+echo $OUTPUT->footer();
