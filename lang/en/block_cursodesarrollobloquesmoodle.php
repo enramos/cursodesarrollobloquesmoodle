@@ -42,3 +42,7 @@ $string['blockdisabled'] = 'Disabled Block (blockdisabled)';
 //0206-19
 $string['allowhtml'] = 'Allow HTML (allowhtml)';
 $string['allowhtml_desc'] = 'Allow HTML Description (allowhtml_desc)';
+
+//0301-26
+$string['addpage'] = 'Add page (addpage)';
+$string['textfields'] = 'Text fields (textfields)';

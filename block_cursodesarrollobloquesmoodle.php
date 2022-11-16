@@ -30,6 +30,8 @@ class block_cursodesarrollobloquesmoodle extends block_base {
 
     public function get_content() {
 
+        global $COURSE;
+
         if ($this->config->disabled) {
             return null;
         }
@@ -51,8 +53,14 @@ class block_cursodesarrollobloquesmoodle extends block_base {
             $this->content->text = 'Puedes cambiar este texto desde la configuración del bloque.';
         }
         
-        $this->content->footer = 'Todos los derechos reservados';
-    
+        //Construimos la URL y agregamos al bloque un enlace con la etiqueta AddPage que nos lleve a la vista de una nueva página
+        //$this->content->footer = 'Todos los derechos reservados';
+        $url = new moodle_url(
+            '/blocks/cursodesarrollobloquesmoodle/view.php', 
+            array('blockid' => $this->instance->id, 'courseid' => $COURSE->id)
+        );
+        $this->content->footer = html_writer::link($url, get_string('addpage', 'block_cursodesarrollobloquesmoodle'));
+
         return $this->content;
     }
 
@@ -94,7 +102,6 @@ class block_cursodesarrollobloquesmoodle extends block_base {
         return parent::instance_config_save($data,$nolongerused);
     }
 
-    
     //Restringir acceso por layout
     function applicable_formats() {
         return array(
