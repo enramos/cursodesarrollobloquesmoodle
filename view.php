@@ -18,7 +18,7 @@
  * view.php tiene el control (la lógica) de la página
  *
  * @package   block_cursodesarrollobloquesmoodle
- * @copyright 2021 su nombre
+ * @copyright 2022 Enrique Ramos Ortiz
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
