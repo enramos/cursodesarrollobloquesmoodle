@@ -49,3 +49,7 @@ $string['textfields'] = 'Text fields (textfields)';
 
 //0303-28
 $string['edithtml'] = 'El bloque Hola Mundo!';
+
+//0304-29
+$string['holamundosettings'] = 'Hola mundo';
+$string['editpage'] = 'Editar parámetros';
