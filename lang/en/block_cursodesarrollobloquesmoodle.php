@@ -25,16 +25,16 @@
 
 $string['pluginname'] = 'Bloque Curso Desarrollo de bloques en Moodle';
 $string['cursodesarrollobloquesmoodle'] = 'Hello world';
-$string['cursodesarrollobloquesmoodle:addinstance'] = 'Add a new block';
-$string['cursodesarrollobloquesmoodle:myaddinstance'] = 'Add a new block to the My Moodle page';
+$string['cursodesarrollobloquesmoodle:addinstance'] = 'Add instance (addinstance)';
+$string['cursodesarrollobloquesmoodle:myaddinstance'] = 'My add instance (myaddinstance)';
 
 //0202-15 Parámetros
 $string['blockstring'] = 'Block String (blockstring)';
 
 //0203-16 Specialization
-$string['blocktitle'] = 'Hello world block (blocktitle)';
-$string['defaulttitle'] = 'Hello world block (defaulttitle)';
-$string['defaulttext'] = 'Hello world block (defaulttext)';
+$string['blocktitle'] = 'Block Title (blocktitle)';
+$string['defaulttitle'] = 'Default Title (defaulttitle)';
+$string['defaulttext'] = 'Default Text (defaulttext)';
 
 //0204-17 Ocultar bloque
 $string['blockdisabled'] = 'Disabled Block (blockdisabled)';
@@ -48,8 +48,12 @@ $string['addpage'] = 'Add page (addpage)';
 $string['textfields'] = 'Text fields (textfields)';
 
 //0303-28
-$string['edithtml'] = 'El bloque Hola Mundo!';
+$string['edithtml'] = 'Edit HTML (edithtml)';
 
 //0304-29
-$string['holamundosettings'] = 'Hola mundo';
-$string['editpage'] = 'Editar parámetros';
+$string['holamundosettings'] = 'Hola mundo settings (holamundosettings)';
+$string['editpage'] = 'Editar page (editpage)';
+
+//0305-30
+$string['pagetitle'] = 'Page title (pagetitle)';
+$string['displayedhtml'] = 'Resumen de la página (displayedhtml)';

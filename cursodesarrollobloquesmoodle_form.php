@@ -30,5 +30,18 @@ class cursodesarrollobloquesmoodle_form extends moodleform {
         
         $mform = & $this->_form;
         $mform->addElement('header','displayinfo', get_string('textfields', 'block_cursodesarrollobloquesmoodle'));
+
+        //0305-30
+    
+            // Elemento de texto
+            $mform->addElement('text', 'pagetitle', get_string('pagetitle', 'block_holamundo'));
+            $mform->setType('pagetitle', PARAM_RAW);
+            $mform->addRule('pagetitle', null, 'required', null, 'client');
+            
+            // Elemento text area con HTML
+            $mform->addElement('editor', 'displaytext', get_string('displayedhtml', 'block_holamundo'));
+            $mform->setType('displaytext', PARAM_RAW);
+            $mform->addRule('displaytext', null, 'required', null, 'client');
+
     }
 }
