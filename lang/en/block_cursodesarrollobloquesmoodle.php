@@ -57,3 +57,7 @@ $string['editpage'] = 'Editar page (editpage)';
 //0305-30
 $string['pagetitle'] = 'Page title (pagetitle)';
 $string['displayedhtml'] = 'Resumen de la página (displayedhtml)';
+
+//0306-31
+$string['picturefields'] = 'Picture Fields (picturefields)';
+$string['displaypicture'] = 'Display picture (displaypicture)';

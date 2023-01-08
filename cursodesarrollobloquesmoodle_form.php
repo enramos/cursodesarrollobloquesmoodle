@@ -43,5 +43,33 @@ class cursodesarrollobloquesmoodle_form extends moodleform {
             $mform->setType('displaytext', PARAM_RAW);
             $mform->addRule('displaytext', null, 'required', null, 'client');
 
+        //0306-31
+        
+            // Filepicker
+            $mform->addElement(
+                'filepicker', 
+                'filename', 
+                get_string('file'), 
+                null, 
+                array('accepted_types' => '*')
+            );
+                    
+            // Un grupo de elementos de la imagen
+            $mform->addElement(
+                'header', 
+                'picfield', 
+                get_string('picturefields', 'block_holamundo'), 
+                null, 
+                false
+            );
+
+            // opción si/no
+            $mform->addElement(
+                'selectyesno', 
+                'displaypicture', 
+                get_string('displaypicture', 'block_holamundo')
+            );
+            $mform->setDefault('displaypicture', 1);
+
     }
 }
