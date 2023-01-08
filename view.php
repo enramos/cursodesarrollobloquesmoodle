@@ -52,16 +52,39 @@ require_login($course);
 //0304-29
 
     // Creamos el nodo del bloque en las migas de pan
-    $settingsnode = $PAGE->settingsnav->add(get_string('holamundosettings', 'block_holamundo'));
+    $settingsnode = $PAGE->settingsnav->add(get_string('cursodesarrollobloquesmoodlesettings', 'block_cursodesarrollobloquesmoodle'));
     // Creamos la URL del bloque con el id del bloque
-    $editurl = new moodle_url('/blocks/holamundo/view.php', array('id' => $id, 'courseid' => $courseid, 'blockid' => $blockid));
+    $editurl = new moodle_url('/blocks/cursodesarrollobloquesmoodle/view.php', array('id' => $id, 'courseid' => $courseid, 'blockid' => $blockid));
     // Añadimos el nodo con la url del bloque
-    $editnode = $settingsnode->add(get_string('editpage', 'block_holamundo'), $editurl);
+    $editnode = $settingsnode->add(get_string('editpage', 'block_cursodesarrollobloquesmoodle'), $editurl);
     // Activamos las migas de pan
     $editnode->make_active();
 
 $cursodesarrollobloquesmoodle = new cursodesarrollobloquesmoodle_form();
+//0309-34
+$toform['blockid'] = $blockid;
+$toform['courseid'] = $courseid;
+$cursodesarrollobloquesmoodle->set_data($toform);
 
-echo $OUTPUT->header();
-$cursodesarrollobloquesmoodle->display();
-echo $OUTPUT->footer();
+
+
+    //echo $OUTPUT->header();
+    //$cursodesarrollobloquesmoodle->display();
+    //echo $OUTPUT->footer();
+
+    if($cursodesarrollobloquesmoodle->is_cancelled()) {
+        // Los formularios cancelados redirigen a la página principal del curso.
+        $courseurl = new moodle_url('/course/view.php', array('id' => $courseid));
+        redirect($courseurl);
+    } else if ($cursodesarrollobloquesmoodle->get_data()) {
+        // Código de proceso de datos.
+        $courseurl = new moodle_url('/course/view.php', array('id' => $id));
+        redirect($courseurl);
+    } else {
+        // Primera vez o con errores
+        $site = get_site();
+        // Desplegamos nuestra página
+        echo $OUTPUT->header();
+        $cursodesarrollobloquesmoodle->display();
+        echo $OUTPUT->footer();
+    }

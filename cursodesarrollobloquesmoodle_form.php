@@ -33,6 +33,12 @@ class cursodesarrollobloquesmoodle_form extends moodleform {
         $mform = & $this->_form;
         $mform->addElement('header','displayinfo', get_string('textfields', 'block_cursodesarrollobloquesmoodle'));
 
+        //0309-34
+            $mform->addElement('hidden', 'blockid');
+            $mform->setType('blockid', PARAM_RAW);
+            $mform->addElement('hidden', 'courseid');
+            $mform->setType('courseid', PARAM_RAW);
+
         //0305-30
     
             // Elemento de texto
@@ -83,6 +89,7 @@ class cursodesarrollobloquesmoodle_form extends moodleform {
             $mform->addGroup($radioarray, 'radioar', get_string('pictureselect', 'block_cursodesarrollobloquesmoodle'), array(' '), FALSE);
 
         //0308-33
+        
             // Selector de fecha
             $mform->addElement(
                 'date_time_selector', 
@@ -91,5 +98,10 @@ class cursodesarrollobloquesmoodle_form extends moodleform {
                 array('optional' => true)
             );
             $mform->setAdvanced('optional');
+
+        //0309-34
+
+            //Añadimos los botones de opción
+            $this->add_action_buttons();
     }
 }

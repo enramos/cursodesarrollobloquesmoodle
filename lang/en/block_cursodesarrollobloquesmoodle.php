@@ -51,7 +51,7 @@ $string['textfields'] = 'Text fields (textfields)';
 $string['edithtml'] = 'Edit HTML (edithtml)';
 
 //0304-29
-$string['holamundosettings'] = 'Hola mundo settings (holamundosettings)';
+$string['cursodesarrollobloquesmoodlesettings'] = 'Curso desarrollo bloques moodle settings (cursodesarrollobloquesmoodlesettings)';
 $string['editpage'] = 'Editar page (editpage)';
 
 //0305-30
