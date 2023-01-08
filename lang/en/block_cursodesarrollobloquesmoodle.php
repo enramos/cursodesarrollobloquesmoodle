@@ -67,5 +67,11 @@ $string['red'] = 'Red';
 $string['green'] = 'Green';
 $string['blue'] = 'Blue';
 $string['pictureselect'] = 'Picture select (pictureselect)';
+
+//0308-33
+$string['displaydate'] = 'Display date (displaydate)';
+
+
+
 //$string[''] = '';
 

@@ -36,12 +36,12 @@ class cursodesarrollobloquesmoodle_form extends moodleform {
         //0305-30
     
             // Elemento de texto
-            $mform->addElement('text', 'pagetitle', get_string('pagetitle', 'block_holamundo'));
+            $mform->addElement('text', 'pagetitle', get_string('pagetitle', 'block_cursodesarrollobloquesmoodle'));
             $mform->setType('pagetitle', PARAM_RAW);
             $mform->addRule('pagetitle', null, 'required', null, 'client');
             
             // Elemento text area con HTML
-            $mform->addElement('editor', 'displaytext', get_string('displayedhtml', 'block_holamundo'));
+            $mform->addElement('editor', 'displaytext', get_string('displayedhtml', 'block_cursodesarrollobloquesmoodle'));
             $mform->setType('displaytext', PARAM_RAW);
             $mform->addRule('displaytext', null, 'required', null, 'client');
 
@@ -60,7 +60,7 @@ class cursodesarrollobloquesmoodle_form extends moodleform {
             $mform->addElement(
                 'header', 
                 'picfield', 
-                get_string('picturefields', 'block_holamundo'), 
+                get_string('picturefields', 'block_cursodesarrollobloquesmoodle'), 
                 null, 
                 false
             );
@@ -69,7 +69,7 @@ class cursodesarrollobloquesmoodle_form extends moodleform {
             $mform->addElement(
                 'selectyesno', 
                 'displaypicture', 
-                get_string('displaypicture', 'block_holamundo')
+                get_string('displaypicture', 'block_cursodesarrollobloquesmoodle')
             );
             $mform->setDefault('displaypicture', 1);
 
@@ -81,5 +81,15 @@ class cursodesarrollobloquesmoodle_form extends moodleform {
                 $radioarray[] =& $mform->createElement('radio', 'picture', '', $images[$i], $i);
             }
             $mform->addGroup($radioarray, 'radioar', get_string('pictureselect', 'block_cursodesarrollobloquesmoodle'), array(' '), FALSE);
+
+        //0308-33
+            // Selector de fecha
+            $mform->addElement(
+                'date_time_selector', 
+                'displaydate', 
+                get_string('displaydate', 'block_cursodesarrollobloquesmoodle'), 
+                array('optional' => true)
+            );
+            $mform->setAdvanced('optional');
     }
 }
