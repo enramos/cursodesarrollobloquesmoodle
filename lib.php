@@ -15,13 +15,15 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Curso: desarrollo bloques Moodle
+ * Archivo de funciones auxiliares lib.php
  *
  * @package   block_cursodesarrollobloquesmoodle
  * @copyright 2022 Enrique Ramos Ortiz
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$plugin->component = 'block_cursodesarrollobloquesmoodle';
-$plugin->version = 2021102000;
-$plugin->requires = 2019052000; // Moodle 3.7
+function block_cursodesarrollobloquesmoodle_images() {
+    return array(html_writer::tag('img', '', array('alt' => get_string('red', 'block_cursodesarrollobloquesmoodle'), 'src' => "pix/red.png")),
+                html_writer::tag('img', '', array('alt' => get_string('blue', 'block_cursodesarrollobloquesmoodle'), 'src' => "pix/blue.png")),
+                html_writer::tag('img', '', array('alt' => get_string('green', 'block_cursodesarrollobloquesmoodle'), 'src' => "pix/green.png")));
+}

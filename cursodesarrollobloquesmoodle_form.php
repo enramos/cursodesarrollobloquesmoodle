@@ -23,6 +23,8 @@
  */
 
 require_once("{$CFG->libdir}/formslib.php");
+require_once($CFG->dirroot.'/blocks/cursodesarrollobloquesmoodle/lib.php');
+
 
 class cursodesarrollobloquesmoodle_form extends moodleform {
     
@@ -71,5 +73,13 @@ class cursodesarrollobloquesmoodle_form extends moodleform {
             );
             $mform->setDefault('displaypicture', 1);
 
+        //0307-32
+
+            $images = block_cursodesarrollobloquesmoodle_images();
+            $radioarray = array();
+            for ($i=0; $i < count($images); $i++){
+                $radioarray[] =& $mform->createElement('radio', 'picture', '', $images[$i], $i);
+            }
+            $mform->addGroup($radioarray, 'radioar', get_string('pictureselect', 'block_cursodesarrollobloquesmoodle'), array(' '), FALSE);
     }
 }

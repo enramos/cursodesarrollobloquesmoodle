@@ -61,3 +61,11 @@ $string['displayedhtml'] = 'Resumen de la página (displayedhtml)';
 //0306-31
 $string['picturefields'] = 'Picture Fields (picturefields)';
 $string['displaypicture'] = 'Display picture (displaypicture)';
+
+//0307-32
+$string['red'] = 'Red';
+$string['green'] = 'Green';
+$string['blue'] = 'Blue';
+$string['pictureselect'] = 'Picture select (pictureselect)';
+//$string[''] = '';
+
